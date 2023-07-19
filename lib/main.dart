@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:todo/blocs/bloc_exports.dart';
-import 'package:todo/screens/tasks_screen.dart';
+import 'package:todo/screens/tabs_screen.dart';
 import 'package:todo/sevices/app_router.dart';
 
 Future<void> main() async {
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             title: 'Flutter Tasks App',
             theme: state.switchValue ? ThemeData.dark() : ThemeData.light(),
-            home: const TasksScreen(),
+            home: const TabsScreen(),
             onGenerateRoute: appRouter.onGerateRoute,
           );
         },
